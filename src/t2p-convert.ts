@@ -59,8 +59,8 @@ async function task (storeDir: string, packageDir: string): Promise<void> {
   const absCwdDir = process.cwd()
   const absProjectDir = absCwdDir
   const absStoreDir = path.isAbsolute(storeDir)
-    ? storeDir
-    : path.resolve(absCwdDir, storeDir)
+    ? path.resolve(storeDir, 'v3')
+    : path.resolve(absCwdDir, storeDir, 'v3')
   const absPackageDir = path.isAbsolute(packageDir)
     ? packageDir
     : path.resolve(absCwdDir, packageDir)
@@ -101,9 +101,6 @@ async function main (): Promise<void> {
   const packageDir =
     (commander.program.getOptionValue('package-dir') as string | undefined) ??
     'packages'
-
-  console.log(storeDir)
-  console.log(packageDir)
 
   await task(storeDir, packageDir)
 }
