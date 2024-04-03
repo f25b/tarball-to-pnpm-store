@@ -1,5 +1,11 @@
 # @systex-f25b/tarball-to-pnpm-store
 
+## 0.0.3
+
+### Patch Changes
+
+- f21c13c: Solve shebang issue
+
 ## 0.0.2
 
 ### Patch Changes
