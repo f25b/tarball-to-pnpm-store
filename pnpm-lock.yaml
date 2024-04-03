@@ -21,6 +21,7 @@ specifiers:
   prettier: ^3.2.5
   prettier-config-standard: ^7.0.0
   prettier-eslint: ^16.3.0
+  shebang-trim: ^1.2.0
   ts-node: ^10.9.2
   typescript: ^5.4.3
 
@@ -47,6 +48,7 @@ devDependencies:
   prettier: 3.2.5
   prettier-config-standard: 7.0.0_prettier@3.2.5
   prettier-eslint: 16.3.0
+  shebang-trim: 1.2.0
   ts-node: 10.9.2_7txb6etev3tbmdud5ecagacssm
   typescript: 5.4.3
 
@@ -2591,6 +2593,10 @@ packages:
       flat-cache: 3.2.0
     dev: true
 
+  /file-uri-to-path/1.0.0:
+    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    dev: true
+
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
@@ -3001,6 +3007,12 @@ packages:
 
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+
+  /inspect-with-kind/1.0.5:
+    resolution: {integrity: sha512-MAQUJuIo7Xqk8EVNP+6d3CKq9c80hi4tjIbIAT6lmGW9W6WzlHiu9PS8uSuUYU+Do+j1baiFp3H25XEVxDIG2g==}
+    dependencies:
+      kind-of: 6.0.3
+    dev: true
 
   /internal-slot/1.0.7:
     resolution: {integrity: sha512-NGnrKwXzSms2qUUih/ILZ5JBqNTSa1+ZmP6flaIp6KmSElgE9qdndzS3cqjrDovwFdmwsGsLdeFgB6suw+1e9g==}
@@ -4370,6 +4382,14 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
+  /shebang-trim/1.2.0:
+    resolution: {integrity: sha512-rcWswtCpCr6hzBnxhbw1D2X3VfxUSPlRjKUJHYE/eznAgNPENlXdoZWh7sKUIXkQOKNf96lZp9GmrK3At6n4Hg==}
+    engines: {node: '>= 10.x'}
+    hasBin: true
+    dependencies:
+      write-file-atomically: 2.0.0
+    dev: true
+
   /side-channel/1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
     engines: {node: '>= 0.4'}
@@ -5015,6 +5035,14 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
+  /write-file-atomic/2.4.3:
+    resolution: {integrity: sha512-GaETH5wwsX+GcnzhPgKcKjJ6M2Cq3/iZp1WyY/X1CSqrW+jVNM9Y7D8EC2sM4ZG/V8wZlSniJnCKWPmBYAucRQ==}
+    dependencies:
+      graceful-fs: 4.2.11
+      imurmurhash: 0.1.4
+      signal-exit: 3.0.7
+    dev: true
+
   /write-file-atomic/5.0.1:
     resolution: {integrity: sha512-+QU2zd6OTD8XWIJCbffaiQeH9U73qIqafo1x6V1snCWYGJf6cVE0cDR4D8xRzcEnfI21IFrUPzPGtcPf8AC+Rw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -5022,6 +5050,15 @@ packages:
       imurmurhash: 0.1.4
       signal-exit: 4.1.0
     dev: false
+
+  /write-file-atomically/2.0.0:
+    resolution: {integrity: sha512-X6a0SCI0EyKtrsC+AgeDwiGYcalC7Ooarag8EGb0zb05KluMZYDTY12NrPozpB2mOT3NAuhMIJRJpBsoZ/E0Vw==}
+    dependencies:
+      file-uri-to-path: 1.0.0
+      inspect-with-kind: 1.0.5
+      is-plain-obj: 1.1.0
+      write-file-atomic: 2.4.3
+    dev: true
 
   /write-yaml-file/5.0.0:
     resolution: {integrity: sha512-FdNA4RyH1L43TlvGG8qOMIfcEczwA5ij+zLXUy3Z83CjxhLvcV7/Q/8pk22wnCgYw7PJhtK+7lhO+qqyT4NdvQ==}

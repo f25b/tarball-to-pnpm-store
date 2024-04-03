@@ -3,12 +3,12 @@
   "version": "0.0.2",
   "description": "A tool that helps convert tarballs within a directory into the pnpm-store directory structure.",
   "files": [
-    "js-dist",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "bin": {
-    "t2p": "js-dist/t2p.js"
+    "t2p": "dist/t2p.js"
   },
   "scripts": {
     "execute": "ts-node ./src/t2p.ts",
@@ -16,7 +16,8 @@
     "lint": "eslint \"**/*.{js,ts}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "postbuild": "node scripts/shebangify.js dist/t2p.js && node scripts/shebangify.js dist/t2p-convert.js"
   },
   "keywords": [
     "pnpm",
@@ -48,6 +49,7 @@
     "prettier": "^3.2.5",
     "prettier-config-standard": "^7.0.0",
     "prettier-eslint": "^16.3.0",
+    "shebang-trim": "^1.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
   }
