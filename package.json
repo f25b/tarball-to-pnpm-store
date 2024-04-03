@@ -7,6 +7,9 @@
     "README.md",
     "LICENSE"
   ],
+  "bin": {
+    "t2p": "js-dist/t2p.js"
+  },
   "scripts": {
     "execute": "ts-node ./src/t2p.ts",
     "build": "tsc",
