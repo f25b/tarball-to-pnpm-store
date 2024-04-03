@@ -1,5 +1,11 @@
 # @systex-f25b/tarball-to-pnpm-store
 
+## 0.0.4
+
+### Patch Changes
+
+- b1b0276: Fix directory issue
+
 ## 0.0.3
 
 ### Patch Changes
