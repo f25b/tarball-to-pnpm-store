@@ -90,22 +90,17 @@ async function task (storeDir: string, packageDir: string): Promise<void> {
 
 async function main (): Promise<void> {
   commander.program
-    .option(
-      '-s, --store-dir <string>',
-      'pnpm store directory location'
-    )
-    .option(
-      '-p, --package-dir <string>',
-      'package directory location')
+    .option('-s, --store-dir <string>', 'pnpm store directory location')
+    .option('-p, --package-dir <string>', 'package directory location')
 
   await commander.program.parseAsync()
 
-  const storeDir = commander.program.getOptionValue('store-dir') as
-    | string
-    | undefined ?? '.pnpm-store'
-  const packageDir = commander.program.getOptionValue('package-dir') as
-    | string
-    | undefined ?? 'packages'
+  const storeDir =
+    (commander.program.getOptionValue('store-dir') as string | undefined) ??
+    '.pnpm-store'
+  const packageDir =
+    (commander.program.getOptionValue('package-dir') as string | undefined) ??
+    'packages'
 
   console.log(storeDir)
   console.log(packageDir)
