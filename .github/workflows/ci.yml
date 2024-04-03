@@ -47,3 +47,13 @@ jobs:
 
       - name: 'Run build'
         run: pnpm build
+
+      - name: 'Archive artifacts'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            dist
+            README.md
+            package.json
+            LICENSE
