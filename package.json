@@ -1,0 +1,51 @@
+{
+  "name": "@systex-f25b/tarball-to-pnpm-store",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "js-dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "execute": "ts-node ./src/t2p.ts",
+    "build": "tsc",
+    "lint": "eslint \"**/*.{js,ts}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
+  },
+  "keywords": [
+    "pnpm",
+    "pnpm-store",
+    "tarball"
+  ],
+  "author": "SYSTEX-F25B",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "@pnpm/client": "^10.0.48",
+    "@pnpm/create-cafs-store": "^6.0.14",
+    "@pnpm/local-resolver": "^11.0.5",
+    "@pnpm/logger": "^5.0.0",
+    "@pnpm/package-requester": "^24.1.10",
+    "@pnpm/tarball-resolver": "^8.0.8",
+    "@pnpm/worker": "^0.3.15",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@pnpm/store-controller-types": "^17.2.0",
+    "@types/node": "^20.12.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "changeset": "^0.2.6",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-eslint": "^16.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
