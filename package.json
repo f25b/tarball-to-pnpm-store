@@ -12,12 +12,11 @@
   },
   "scripts": {
     "execute": "ts-node ./src/t2p.ts",
-    "build": "tsc",
+    "build": "tsc && node scripts/shebangify.js dist/t2p.js && node scripts/shebangify.js dist/t2p-convert.js",
     "lint": "eslint \"**/*.{js,ts}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish",
-    "postbuild": "node scripts/shebangify.js dist/t2p.js && node scripts/shebangify.js dist/t2p-convert.js"
+    "release": "changeset publish"
   },
   "keywords": [
     "pnpm",
