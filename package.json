@@ -25,6 +25,10 @@
   ],
   "author": "SYSTEX-F25B",
   "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f25b/tarball-to-pnpm-store"
+  },
   "dependencies": {
     "@pnpm/client": "^10.0.48",
     "@pnpm/create-cafs-store": "^6.0.14",
@@ -48,7 +52,6 @@
     "prettier": "^3.2.5",
     "prettier-config-standard": "^7.0.0",
     "prettier-eslint": "^16.3.0",
-    "shebang-trim": "^1.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
   }
