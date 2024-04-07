@@ -1,5 +1,11 @@
 # @systex-f25b/tarball-to-pnpm-store
 
+## 0.0.5
+
+### Patch Changes
+
+- a4ac738: Add git repository info
+
 ## 0.0.4
 
 ### Patch Changes

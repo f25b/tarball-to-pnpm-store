@@ -1,6 +1,6 @@
 {
   "name": "@systex-f25b/tarball-to-pnpm-store",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A tool that helps convert tarballs within a directory into the pnpm-store directory structure.",
   "files": [
     "dist",
